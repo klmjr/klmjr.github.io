@@ -2,8 +2,7 @@
   "name": "kjs-website",
   "private": true,
   "scripts": {
-    "deploy": "gridsome build && gh-pages -d dist",
-    "build": "gridsome build",
+    "deploy": "gridsome build && gh-pages -d dist -b master",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },

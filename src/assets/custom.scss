@@ -1,0 +1,21 @@
+$morning: #8aa399;
+$rhythm: #7d84b2;
+$yonder: #8fa6cb;
+$yegreen: #dbf4a7;
+$aero: #d5f9de;
+
+$colors: (
+    "morning": $morning,
+    "rhythm": $rhythm,
+   "yonder": $yonder,
+    "yegreen": $yegreen,
+    "aero": $aero
+);
+$theme-colors: (
+    "primary": $morning,
+    "secondary": $yonder,
+    "dark": $rhythm
+);
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';

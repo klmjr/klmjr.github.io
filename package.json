@@ -2,9 +2,11 @@
   "name": "kjs-website",
   "private": true,
   "scripts": {
-    "deploy": "gridsome build && gh-pages -d dist -b master",
+    "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@gridsome/source-filesystem": "^0.6.2",

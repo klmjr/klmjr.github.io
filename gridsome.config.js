@@ -16,7 +16,8 @@ function addStyleResource (rule) {
 }
 module.exports = {
   siteName: 'My portfolio',
-  pathPrefix: '/path',
+  siteUrl: 'https://klmjr.github.io',
+  pathPrefix: '/klmjr.github.io',
   transformers: {
     remark: {
       externalLinksTarget: '_blank',

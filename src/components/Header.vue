@@ -2,7 +2,12 @@
 <div>
      <b-navbar toggleable="lg" type="secondary" variant="dark">
         
-    <b-navbar-brand href="#">NavBar</b-navbar-brand>
+    <b-navbar-brand href="/">
+
+      <img src="./thecodingquest.png" width="100" height="100" class="d-inline-block align-top" alt="">
+    
+ 
+    </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,10 +17,13 @@
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
         
+        <!--C:\Users\kjmas\Desktop\Dev\my-website\kjs-website\src\assets\images-->
 
-        <b-nav-item-dropdown text="Learn to code" right>
-          <b-dropdown-item href="about">Gridsome Bootstrap-Vue</b-dropdown-item>
-          <b-dropdown-item href="Header">Godot</b-dropdown-item>
+        <b-nav-item-dropdown text="Blogs" right>
+          <b-dropdown-item href="coding">Coding tutorials</b-dropdown-item>
+          <b-dropdown-item href="gaming">Kismet Games</b-dropdown-item>
+          <b-dropdown-item href="projects">Projects</b-dropdown-item>
+        
         </b-nav-item-dropdown>
 
         <b-nav-item-dropdown right>
@@ -53,6 +61,7 @@ import { BDropdownForm } from 'bootstrap-vue'
 import { BDropdownText } from 'bootstrap-vue'
 import { BDropdownGroup } from 'bootstrap-vue'
 import { BDropdownHeader } from 'bootstrap-vue'
+
 export default {
   components: {
     

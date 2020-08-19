@@ -27,33 +27,25 @@ module.exports = {
       ]
     }
   },
-  plugins: [{
-    use: '@gridsome/source-filesystem',
-    options: {
-      path: 'posts/**/*.md',
-      typeName: 'Post',
-      remark: {
-        plugins: [
-          // ...local plugins
-        ]
-      }
-    }
-    
-  },
+  plugins: [
  { use: 'gridsome-source-google-sheets',
       options: {
-        sheetId: '1GojviMk7-L_3E0Uuj3gCrdBZkKikdmPM6RSGpfJAHEk', 
-        apiKey: 'GOOGLE_API_KEY',
-        // type: 'TYPE_NAME', //Optional - default is googleSheet. Used for graphql queries.
+        sheetId: '12mGV0dxSWCF-9IK5BN3tAeRoVJlIZZyu7UBcAiqkniA', 
+        apiKey: 'AIzaSyDjELE9BGi2tYf_-LqO5rFXiUKicuT-nEM',
       }
     },
   
-  {
-    use: `gridsome-plugin-netlify-cms`,
-    options: {
-      publicPath: `/admin`
-    }
-  },],
+  ],
+  templates: {
+    googleSheet: [
+      {
+        path: '/:Topic',
+       component: './src/templates/googleSheet.vue'
+      }
+    ]
+  },
+
+
   chainWebpack (config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']

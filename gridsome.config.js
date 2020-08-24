@@ -15,7 +15,7 @@ function addStyleResource (rule) {
     })
 }
 module.exports = {
-  siteName: 'My portfolio',
+  siteName: 'The Coding Quest',
   siteUrl: 'https://klmjr.github.io',
   pathPrefix: '/klmjr.github.io',
   transformers: {
@@ -29,22 +29,23 @@ module.exports = {
     }
   },
   plugins: [
- { use: 'gridsome-source-google-sheets',
+ 
+    {
+      use: 'gridsome-source-storyblok',
       options: {
-        sheetId: '12mGV0dxSWCF-9IK5BN3tAeRoVJlIZZyu7UBcAiqkniA', 
-        apiKey: 'AIzaSyDjELE9BGi2tYf_-LqO5rFXiUKicuT-nEM',
+        client: {
+          accessToken: 'idFLM3JjIHCZsr4U1hEKBQtt'
+        },
+        types: {
+          story: {
+            typeName: 'StoryblokEntry'
+          }
+        }
       }
-    },
+    }
   
   ],
-  templates: {
-    googleSheet: [
-      {
-        path: '/:Topic',
-       component: './src/templates/googleSheet.vue'
-      }
-    ]
-  },
+ 
 
 
   chainWebpack (config) {

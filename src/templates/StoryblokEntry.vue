@@ -3,11 +3,10 @@
 <div>
   <Layout>
 <div v-for="edge in $page.allStoryblokEntry.edges" :key="edge.node.id">
-  <h1>{{ edge.node.content.title }}</h1>
+  <Richtext :text="edge.node.content.body">
+  {{ edge.node.content.body }}
 
-  <h2>{{ edge.node.content.description }}</h2>
-
-  <h2>{{ edge.node.content.body }} </h2>
+  </Richtext>
   </div>
   </Layout>
 </div>
@@ -26,3 +25,13 @@ allStoryblokEntry{
   }
 }
 </page-query>
+<script>
+import Richtext from '~/components/Richtext.vue'
+
+
+export default {
+  components: {
+   Richtext
+  }
+}
+</script>

@@ -20,8 +20,8 @@
         <!--C:\Users\kjmas\Desktop\Dev\my-website\kjs-website\src\assets\images-->
 
         <b-nav-item-dropdown text="Blogs" right>
-          <b-dropdown-item href="coding">Coding tutorials</b-dropdown-item>
-          <b-dropdown-item href="gaming">Kismet Games</b-dropdown-item>
+          <b-dropdown-item g-link to="/coding/">Coding tutorials</b-dropdown-item>
+          <b-dropdown-item g-link to="gaming">Kismet Games</b-dropdown-item>
           <b-dropdown-item href="projects">Projects</b-dropdown-item>
         
         </b-nav-item-dropdown>
